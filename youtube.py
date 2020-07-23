@@ -1,4 +1,4 @@
-import time
+import time, os
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -9,7 +9,7 @@ from youtube_title_parse import get_artist_title
 
 class Youtube:
     def __init__(self, p_url):
-        self.path = 'chromedriver'
+        self.path = os.getcwd() + os.sep + 'chromedriver'
         self.playlist_url = p_url
         self.songs_info = {}
 
